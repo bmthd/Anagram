@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ *  anagram表操作用クラス
  * @author jouge
- * anagram表操作用クラス
  * 
  */
 public class AnagramDAO {

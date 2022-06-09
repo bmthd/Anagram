@@ -9,42 +9,45 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author jouge
  * inputword表操作用クラス
  * 
+ * @author jouge
  */
-public class InputWordDAO{
+public class InputWordDAO {
   private List<InputWord> list;
   public Connection con;
+
   public InputWordDAO(Connection con) {
-      list = new ArrayList<>();
-      this.con = con;
-      try {
-        this.con.setAutoCommit(false);
-      } catch (SQLException e) {
-        e.printStackTrace();
-      }
+    list = new ArrayList<>();
+    this.con = con;
+    try {
+      this.con.setAutoCommit(false);
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
   }
-  
+
   /**
    * 入力された単語をinputword表に格納する
+   * 
    * @param s,t
    */
   public void insert(String s, Timestamp t) {
     String sql = "INSERT INTO inputword (word,time) VALUES(?,?)";
-    try (PreparedStatement stmt = con.prepareStatement(sql)){
+    try (PreparedStatement stmt = con.prepareStatement(sql)) {
       stmt.setString(1, s);
       stmt.setTimestamp(2, t);
       stmt.executeUpdate();
-      System.out.println("INSERT成功"+s+t);
+      System.out.println("INSERT成功" + s + t);
       con.commit();
     } catch (SQLException e) {
       System.out.println("INSERTエラー：" + e.getMessage());
     }
   }
-  
+
   /**
    * inputword表のIDを取得する
+   * 
    * @param word
    * @param time
    * @return id
@@ -64,9 +67,10 @@ public class InputWordDAO{
     }
     return id;
   }
-  
+
   /**
    * 過去に入力された単語を新しい順に10件取得しそのリストを返す
+   * 
    * @return list InputWord型のArrayList
    */
   public List<InputWord> setInputWord() {

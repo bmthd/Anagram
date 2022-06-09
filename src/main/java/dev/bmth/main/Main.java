@@ -6,7 +6,7 @@ import dev.bmth.sql.DBConnection;
 import twitter4j.TwitterException;
 
 /**
- * 他のクラスを操作するクラス
+ * 他のクラスを操作するためのクラス
  * @author jouge
  *
  */

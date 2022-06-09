@@ -2,9 +2,13 @@ package dev.bmth.sql;
 
 import java.util.ResourceBundle;
 
+/**
+ * propertiesファイルからデータベース接続情報を取得する
+ * 
+ * @author jouge
+ *
+ */
 public class DBUtil {
-
-
 
   private static String URL;
 

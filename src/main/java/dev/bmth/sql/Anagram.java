@@ -2,16 +2,17 @@ package dev.bmth.sql;
 
 
 /**
- * @author jouge
  * anagram表を表すクラス
+ * 
+ * @author jouge
  *
  */
 public class Anagram {
-  
+
   private int id;
-  
+
   private String word;
-  
+
   private int count;
 
   public int getId() {

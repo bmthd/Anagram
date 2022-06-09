@@ -11,27 +11,28 @@ import jakarta.servlet.http.HttpServletResponse;
  * Servlet implementation class AboutServlet
  */
 public class AboutServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AboutServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+  private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+  /**
+   * @see HttpServlet#HttpServlet()
+   */
+  public AboutServlet() {
+    super();
+    // TODO Auto-generated constructor stub
+  }
 
-      RequestDispatcher dispatcher =  request.getRequestDispatcher("/html/About.html");
+  /**
+   * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+   */
+  protected void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+    // TODO Auto-generated method stub
 
-      dispatcher.forward(request, response);
+    RequestDispatcher dispatcher = request.getRequestDispatcher("/html/About.html");
 
-	}
+    dispatcher.forward(request, response);
+
+  }
 
 
 }

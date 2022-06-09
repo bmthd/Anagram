@@ -3,9 +3,9 @@ package dev.bmth.sql;
 import java.sql.Timestamp;
 
 /**
- * @author jouge
  * inputword表を表すクラス
- *
+ * 
+ * @author jouge
  */
 public class InputWord {
   private int id;
@@ -18,35 +18,40 @@ public class InputWord {
   public int getId() {
     return id;
   }
+
   /**
    * @param id セットする id
    */
   public void setId(int id) {
     this.id = id;
   }
+
   /**
    * @return word
    */
   public String getWord() {
     return word;
   }
+
   /**
    * @param word セットする word
    */
   public void setWord(String word) {
     this.word = word;
   }
+
   /**
    * @return time
    */
   public Timestamp getTime() {
     return time;
   }
+
   /**
    * @param time セットする time
    */
   public void setTime(Timestamp time) {
     this.time = time;
   }
-  
+
 }
